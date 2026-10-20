@@ -2,14 +2,14 @@
 
 Date: 2026-10-20
 
-Environment: Python 3.13.5, `apify` 4.1.0, `httpx` 0.28.1, `pytest` 9.1.1. Virtualenv: `tender_monitor_actor/.venv` (not in the zip).
+Environment: Python 3.13.5, `apify` 4.1.0, `httpx` 0.28.1, `pytest` 9.1.1, `jsonschema` 4.26.0 (`requirements-dev.txt`). Virtualenv: `tender_monitor_actor/.venv` (not in the zip).
 
 ## Pytest
 
 Command: `.venv/bin/python -m pytest -q`
 
 ```
-15 passed in 0.59s
+16 passed in 0.55s
 ```
 
 Covered offline, with fixture JSON, CSV, and HTML and with no network:
@@ -23,6 +23,7 @@ Covered offline, with fixture JSON, CSV, and HTML and with no network:
 - SAM.gov skipped when `samGovApiKey` is empty, with no HTTP call
 - `Actor.charge` exception tolerated; `event_charge_limit_reached` stops the run
 - HTTP 429/5xx retried at most twice; HTTP 404 not retried; `api_key` redacted
+- Dataset schema: TED, UK FTS (`url` null), CanadaBuys, SAM.gov, and an all-null `finalize` item validate; schema properties match `finalize` keys
 
 ## Local run
 

@@ -1,19 +1,23 @@
 {
   "actorSpecification": 1,
   "fields": {
-    "title": { "type": "string" },
-    "buyer": { "type": "string" },
-    "country": { "type": "string" },
-    "category": { "type": "string" },
-    "value": { "type": "number" },
-    "currency": { "type": "string" },
-    "publishedDate": { "type": "string" },
-    "deadline": { "type": "string" },
-    "url": { "type": "string" },
-    "noticeId": { "type": "string" },
-    "source": { "type": "string" },
-    "description": { "type": "string" },
-    "fetchedAt": { "type": "string" }
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "title": { "type": "string" },
+      "buyer": { "type": "string" },
+      "country": { "type": "string" },
+      "category": { "type": "string" },
+      "value": { "type": "number" },
+      "currency": { "type": "string" },
+      "publishedDate": { "type": "string" },
+      "deadline": { "type": "string" },
+      "url": { "type": "string" },
+      "noticeId": { "type": "string" },
+      "source": { "type": "string" },
+      "description": { "type": "string" },
+      "fetchedAt": { "type": "string" }
+    }
   },
   "views": {
     "overview": {

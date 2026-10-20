@@ -1,0 +1,11 @@
+{
+  "actorSpecification": 1,
+  "name": "public-tender-monitor",
+  "title": "Public Tender Monitor",
+  "version": "0.1",
+  "input": "./input_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "dockerfile": "../Dockerfile"
+}

@@ -1,0 +1,58 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "title": { "type": "string" },
+    "buyer": { "type": "string" },
+    "country": { "type": "string" },
+    "category": { "type": "string" },
+    "value": { "type": "number" },
+    "currency": { "type": "string" },
+    "publishedDate": { "type": "string" },
+    "deadline": { "type": "string" },
+    "url": { "type": "string" },
+    "noticeId": { "type": "string" },
+    "source": { "type": "string" },
+    "description": { "type": "string" },
+    "fetchedAt": { "type": "string" }
+  },
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": [
+          "title",
+          "buyer",
+          "country",
+          "category",
+          "value",
+          "currency",
+          "publishedDate",
+          "deadline",
+          "url",
+          "noticeId",
+          "source",
+          "description",
+          "fetchedAt"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "title": { "label": "Title", "format": "text" },
+          "buyer": { "label": "Buyer", "format": "text" },
+          "country": { "label": "Country", "format": "text" },
+          "category": { "label": "Category", "format": "text" },
+          "value": { "label": "Value", "format": "number" },
+          "currency": { "label": "Currency", "format": "text" },
+          "publishedDate": { "label": "Published", "format": "text" },
+          "deadline": { "label": "Deadline", "format": "text" },
+          "url": { "label": "Notice", "format": "link" },
+          "noticeId": { "label": "Notice ID", "format": "text" },
+          "source": { "label": "Source", "format": "text" },
+          "description": { "label": "Description", "format": "text" },
+          "fetchedAt": { "label": "Fetched at", "format": "text" }
+        }
+      }
+    }
+  }
+}

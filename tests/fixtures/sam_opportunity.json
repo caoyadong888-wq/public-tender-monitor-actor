@@ -1,0 +1,13 @@
+{
+  "noticeId": "abc123",
+  "title": "Network server support",
+  "fullParentPathName": "GENERAL SERVICES ADMINISTRATION",
+  "postedDate": "10/15/2026",
+  "responseDeadLine": "2026-11-20T18:00:00-04:00",
+  "naicsCode": "541512",
+  "classificationCode": "D301",
+  "active": "Yes",
+  "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=abc123",
+  "uiLink": "https://sam.gov/opp/abc123/view",
+  "placeOfPerformance": {"country": {"code": "USA"}}
+}

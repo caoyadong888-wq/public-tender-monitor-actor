@@ -1,0 +1,96 @@
+{
+  "title": "Public Tender Monitor input",
+  "description": "Search open public procurement notices from official free APIs and feeds.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "sources": {
+      "title": "Sources",
+      "type": "array",
+      "description": "Official sources to query. A source that fails is logged and skipped.",
+      "editor": "select",
+      "uniqueItems": true,
+      "default": ["ted", "uk_fts", "uk_contracts_finder", "canadabuys"],
+      "items": {
+        "type": "string",
+        "enum": [
+          "ted",
+          "uk_fts",
+          "uk_contracts_finder",
+          "canadabuys",
+          "sam_gov",
+          "austender",
+          "ccgp"
+        ],
+        "enumTitles": [
+          "TED (EU)",
+          "UK Find a Tender",
+          "UK Contracts Finder",
+          "CanadaBuys",
+          "SAM.gov",
+          "AusTender (experimental)",
+          "CCGP (China)"
+        ]
+      }
+    },
+    "keywords": {
+      "title": "Keywords",
+      "type": "array",
+      "description": "Case-insensitive substring match against the title or description. A notice matches if any keyword hits. Leave empty to disable keyword filtering.",
+      "editor": "stringList",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cpvCodes": {
+      "title": "CPV or category codes",
+      "type": "array",
+      "description": "CPV codes for TED and the UK sources (prefix match). Other sources match these strings against the published category text or codes.",
+      "editor": "stringList",
+      "items": {
+        "type": "string"
+      }
+    },
+    "countries": {
+      "title": "Countries",
+      "type": "array",
+      "description": "ISO 3166-1 alpha-3 codes. TED filters on buyer country. Leave empty to keep every country.",
+      "editor": "stringList",
+      "items": {
+        "type": "string"
+      }
+    },
+    "openOnly": {
+      "title": "Open notices only",
+      "type": "boolean",
+      "description": "Drop notices whose deadline is already past. Notices with no published deadline are kept.",
+      "default": true,
+      "editor": "checkbox"
+    },
+    "publishedWithinDays": {
+      "title": "Published within days",
+      "type": "integer",
+      "description": "Keep notices published on or after this many days ago. Notices with no published date are dropped.",
+      "default": 30,
+      "minimum": 1,
+      "maximum": 3650,
+      "editor": "number"
+    },
+    "maxItems": {
+      "title": "Maximum items",
+      "type": "integer",
+      "description": "Global cap on dataset items. Each source is also capped at this number before the results are interleaved.",
+      "default": 100,
+      "minimum": 1,
+      "maximum": 5000,
+      "editor": "number"
+    },
+    "samGovApiKey": {
+      "title": "SAM.gov API key",
+      "type": "string",
+      "description": "Optional public API key from SAM.gov. Used only when sam_gov is selected. If sam_gov is selected and this is empty, that source is skipped with a warning.",
+      "editor": "textfield",
+      "isSecret": true
+    }
+  }
+}

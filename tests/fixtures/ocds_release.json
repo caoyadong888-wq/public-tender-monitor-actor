@@ -1,0 +1,19 @@
+{
+  "ocid": "ocds-h6vhtk-078a97",
+  "id": "098407-2026",
+  "date": "2026-10-19T11:45:09+01:00",
+  "tag": ["tender"],
+  "buyer": {"id": "GB-FTS-187674", "name": "Oakham Town Council"},
+  "tender": {
+    "title": "Oakham Town Centre Flower Displays",
+    "description": "Supply of seasonal flower displays for the town centre.",
+    "status": "active",
+    "classification": {
+      "scheme": "CPV",
+      "id": "77300000",
+      "description": "Horticultural services"
+    },
+    "value": {"amount": 250000, "currency": "GBP"},
+    "tenderPeriod": {"endDate": "2026-10-27"}
+  }
+}

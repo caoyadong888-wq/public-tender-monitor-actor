@@ -1,0 +1,17 @@
+{
+  "publication-number": "674231-2026",
+  "notice-title": {
+    "ces": "Balík programů",
+    "eng": "Czechia – Security software package – SW pro SIEM"
+  },
+  "buyer-name": {"ces": ["Středisko společných činností AV ČR, v. v. i."]},
+  "buyer-country": ["CZE"],
+  "deadline-receipt-tender-date-lot": ["2026-11-04+01:00", "2026-10-01+02:00"],
+  "publication-date": "2026-10-01+02:00",
+  "classification-cpv": ["48730000", "72268000", "48730000"],
+  "estimated-value-lot": ["100"],
+  "estimated-value-cur-lot": ["EUR"],
+  "estimated-value-proc": "5300000",
+  "estimated-value-cur-proc": "CZK",
+  "description-lot": {"ces": ["Dodání software"], "eng": ["Delivery of security software"]}
+}
